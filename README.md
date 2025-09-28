@@ -50,8 +50,8 @@ npm run dev
 O app estará disponível em http://localhost:5173 (ou a porta indicada pelo Vite).
 
 4. Configurar o ESP32
-T
-enha o código rodando no ESP32 para que as leituras sejam enviadas ([instruções](https://github.com/nandacoimbra/controle-umidade-esp32))
+
+Tenha o código rodando no ESP32 para que as leituras sejam enviadas ([instruções](https://github.com/nandacoimbra/controle-umidade-esp32))
 
 ## Uso
 
