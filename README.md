@@ -7,7 +7,7 @@ O sistema coleta leituras a cada 15 minutos, ou quando o usuário solicitar, e e
 - Um histórico de leituras com opção de limpar todos os registros.
 - Um aviso se é necessário regar ou não a planta, de acordo com a umidade detectada.
 
-![alt text](image-1.png)
+![alt text](controle-umidade.png)
 
 ## Funcionalidades
 
@@ -32,7 +32,7 @@ O sistema coleta leituras a cada 15 minutos, ou quando o usuário solicitar, e e
 
 1. Clonar o Repositório  
 ```bash
-git clone https://github.com/seu-usuario/controle-umidade.git
+git clone https://github.com/nandacoimbra/controle-umidade.git
 cd controle-umidade
 ```
 
