@@ -18,15 +18,15 @@ O sistema coleta leituras a cada 15 minutos, ou quando o usuário solicitar, e e
 - Botão para limpar o histórico de leituras.
 - Estilização responsiva com as cores do tema e fonte Poppins.
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - React
 - Vite
 - Chart.js
 - react-chartjs-2
-- ESP32 + PlatformIO
+- ESP32 + PlatformIO (Link do projeto para o ESP32: https://github.com/nandacoimbra/controle-umidade-esp32)
 - Sensor de umidade de solo
-- Coolors (para estilização)
+- Coolors (para definição da paleta de cores)
 
 ## Como Instalar e Rodar Localmente
 
@@ -50,7 +50,8 @@ npm run dev
 O app estará disponível em http://localhost:5173 (ou a porta indicada pelo Vite).
 
 4. Configurar o ESP32
-Tenha o código rodando no ESP32 para que as leituras sejam enviadas (link para projeto)
+T
+enha o código rodando no ESP32 para que as leituras sejam enviadas ([instruções](https://github.com/nandacoimbra/controle-umidade-esp32))
 
 ## Uso
 
