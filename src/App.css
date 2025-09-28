@@ -1,42 +1,61 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --night: #121619ff;
+  --brunswick-green: #2d4739ff;
+  --jungle-green: #49a078ff;
+  --aero: #5db7deff;
+  --citrine: #e0ca3cff;
+  --eggshell: #F4EBD9;
+  --lavender-blush: #EEE5E9;
+  --fuvian:#E8871E;
+  }
+
+body {
+  margin: 0;
+ font-family: 'Poppins', Arial, sans-serif;
+  background-color: var(--lavender-blush);
+  /* color: var(--aero); */
+}
+h2{
+  margin-top: 0;
+}
+
+.app-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+  color: var(--night);
 }
 
 .card {
-  padding: 2em;
+  background-color: var(--brunswick-green);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.5);
 }
 
-.read-the-docs {
-  color: #888;
+.leitura-atual p {
+  margin: 5px 0;
+}
+
+.regar {
+  color: var(--fuvian);
+  font-weight: bold;
+}
+
+.ok {
+  color: var(--jungle-green);
+  font-weight: bold;
+}
+
+.planta img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
 }
