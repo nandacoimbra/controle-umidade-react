@@ -1,16 +1,62 @@
-# React + Vite
+# 🌱 Monitoramento de Umidade de Planta - FrontEnd
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um aplicativo React para monitorar a umidade do solo de uma planta, utilizando um sensor conectado a um ESP32.  
+O sistema coleta leituras a cada 15 minutos, ou quando o usuário solicitar, e exibe as informações em um gráfico interativo e em um card, permitindo visualizar:
 
-Currently, two official plugins are available:
+- A última leitura de umidade (%).
+- Um histórico de leituras com opção de limpar todos os registros.
+- Um aviso se é necessário regar ou não a planta, de acordo com a umidade detectada.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![alt text](image-1.png)
 
-## React Compiler
+## Funcionalidades
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Coleta leituras do sensor de umidade do ESP32 via HTTP.
+- Conversão automática dos valores analógicos do sensor (0–4095) para porcentagem (0–100%).
+- Gráfico estilizado com `react-chartjs-2` mostrando a variação da umidade no solo.
+- Card com leitura atual e status “Regar” ou “Ok”.
+- Botão para limpar o histórico de leituras.
+- Estilização responsiva com as cores do tema e fonte Poppins.
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias Utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- Chart.js
+- react-chartjs-2
+- ESP32 + PlatformIO
+- Sensor de umidade de solo
+- Coolors (para estilização)
+
+## Como Instalar e Rodar Localmente
+
+1. Clonar o Repositório  
+```bash
+git clone https://github.com/seu-usuario/controle-umidade.git
+cd controle-umidade
+```
+
+2. Instalar as dependências
+```bash
+npm install
+npm install react-chartjs-2 chart.js
+
+```
+3. Rodar o projeto
+```bash
+npm run dev
+```
+
+O app estará disponível em http://localhost:5173 (ou a porta indicada pelo Vite).
+
+4. Configurar o ESP32
+Tenha o código rodando no ESP32 para que as leituras sejam enviadas (link para projeto)
+
+## Uso
+
+- Abra a aplicação no navegador.
+- Veja a umidade atual e o gráfico histórico.
+- Clique no botão Limpar Histórico para apagar todos os registros.
+- Confira se é necessário regar a planta:
+- < 100%: aparece o alerta “Regar” (em laranja)
+- ≥ 100%: aparece o status “Ok” (em verde)
