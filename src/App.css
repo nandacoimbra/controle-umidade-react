@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 :root {
   --night: #121619ff;
@@ -6,42 +6,85 @@
   --jungle-green: #49a078ff;
   --aero: #5db7deff;
   --citrine: #e0ca3cff;
-  --eggshell: #F4EBD9;
-  --lavender-blush: #EEE5E9;
-  --fuvian:#E8871E;
-  }
+  --eggshell: #f4ebd9;
+  --lavender-blush: #eee5e9;
+  --fuvian: #e8871e;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
 
 body {
   margin: 0;
- font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   background-color: var(--lavender-blush);
-  /* color: var(--aero); */
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
 }
-h2{
+
+h2 {
   margin-top: 0;
 }
 
 .app-container {
+  width: 100%;
+  max-width: 1200px;
   padding: 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
 }
 
 .title {
   text-align: center;
   color: var(--night);
+  margin: 0;
+}
+
+.graph-data {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
 }
 
 .card {
   background-color: var(--brunswick-green);
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0px 2px 8px rgba(0,0,0,0.5);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+  flex: 1 1 300px; /* cresce, encolhe, base */
+}
+
+.card.leitura-atual,
+.card.planta {
+  max-width: 500px;
+  height: auto; /* altura automática para não cortar conteúdo */
+  margin-bottom: 7px;
+}
+
+.plant-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
 }
 
 .leitura-atual p {
   margin: 5px 0;
+  color: var(--eggshell);
 }
 
 .regar {
@@ -58,4 +101,39 @@ h2{
   width: 100%;
   max-width: 300px;
   border-radius: 8px;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px;
+  }
+
+  .graph-data {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 95%;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .leitura-atual p {
+    font-size: 0.9rem;
+  }
 }
