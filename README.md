@@ -1,4 +1,4 @@
-# 🌱 Monitoramento de Umidade de Planta - FrontEnd
+# 🌱 Monitoramento de Umidade de Solo - FrontEnd
 
 Um aplicativo React para monitorar a umidade do solo de uma planta, utilizando um sensor conectado a um ESP32.  
 O sistema coleta leituras a cada 15 minutos, ou quando o usuário solicitar, e exibe as informações em um gráfico interativo e em um card, permitindo visualizar:
